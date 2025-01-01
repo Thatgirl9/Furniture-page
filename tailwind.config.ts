@@ -35,6 +35,7 @@ export default {
           8: "#C4C4C4",
           9: "#9F9F9F",
           10: "#D9D9D9",
+          11: "#B0B0B0",
         },
       },
       fontFamily: {
