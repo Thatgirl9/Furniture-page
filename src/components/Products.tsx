@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ProductImage1 from "@/assets/products/Images.png";
 import ProductImage2 from "@/assets/products/Images (4).png";
@@ -13,8 +14,11 @@ import Image from "next/image";
 import { ProductItem } from "@/types/constants";
 
 const Products = () => {
+  const [hover, setHover] = React.useState<boolean>(false);
+  const [active, setActive] = React.useState<number>(0);
   const productItems: ProductItem[] = [
     {
+      id: 1,
       image: ProductImage1,
       title: "Syltherine",
       description: "Stylish cafe chair",
@@ -25,6 +29,7 @@ const Products = () => {
     },
 
     {
+      id: 2,
       image: ProductImage2,
       title: "Leviosa",
       description: "Stylish cafe chair",
@@ -32,6 +37,7 @@ const Products = () => {
     },
 
     {
+      id: 3,
       image: ProductImage3,
       title: "Lolito",
       description: "Luxury big sofa",
@@ -42,6 +48,7 @@ const Products = () => {
     },
 
     {
+      id: 4,
       image: ProductImage4,
       title: "Respira",
       description: "Outdoor bar table and stool",
@@ -50,12 +57,14 @@ const Products = () => {
       newText: "New",
     },
     {
+      id: 5,
       image: ProductImage5,
       title: "Grifo",
       description: "Night lamp",
       price: "Rp 1.500.000",
     },
     {
+      id: 6,
       image: ProductImage6,
       title: "Muggo",
       description: "Small mug",
@@ -64,6 +73,7 @@ const Products = () => {
       newText: "New",
     },
     {
+      id: 7,
       image: ProductImage7,
       title: "Pingky",
       description: "Cute bed set",
@@ -73,6 +83,7 @@ const Products = () => {
       discountPercent: "-50%",
     },
     {
+      id: 8,
       image: ProductImage8,
       title: "Potty",
       description: "Minimalist flower pot",
@@ -82,11 +93,29 @@ const Products = () => {
     },
   ];
 
+  // const itemHover = () => {
+  //   onmouseenter(itemHover, true);
+  // }
   return (
     <section className="grid grid-cols-4 gap-5 mt-14">
       {productItems.map((items, index) => {
         return (
-          <div className=" bg-background-1 relative" key={index}>
+          <div
+            className=" bg-background-1 relative hover:cursor-pointer"
+            key={index}
+            onMouseOver={() => {
+              setHover(true);
+              setActive(items.id);
+            }}
+            onMouseLeave={() => setHover(false)}
+          >
+            {hover && active === items.id && (
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-10">
+                <div className="flex justify-center items-center w-full h-full">
+                  <p className="text-white text-3xl">View Image</p>
+                </div>
+              </div>
+            )}
             {items.discount || items.newProduct ? (
               <div
                 className={`${

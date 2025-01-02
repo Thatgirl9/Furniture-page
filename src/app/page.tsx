@@ -1,3 +1,4 @@
+"use client";
 import Home from "./Homepage/page";
 
 export default function HomeTest() {

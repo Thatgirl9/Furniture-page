@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./homePage.css";
 import Range1 from "@/assets/homePage/Mask Group.png";
@@ -5,6 +6,7 @@ import Range2 from "@/assets/homePage/Image-living room.png";
 import Range3 from "@/assets/homePage/Mask Group (1).png";
 import Image from "next/image";
 import Products from "@/components/Products";
+import InspirationalRoom from "@/components/InspirationalRoom";
 
 const Home = () => {
   const rangeImages = [
@@ -68,13 +70,15 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mb-10 flex flex-col items-center mt-20">
+      <section className="mb-12 flex flex-col items-center mt-20">
         <h1 className="text-3xl font-bold text-primaryText-4">Our Products</h1>
         <Products />
         <button className="text-primaryBrown-0 border-primaryBrown-0 bg-transparent border mt-7 px-16 text-base font-semibold h-12">
           Show More
         </button>
       </section>
+
+      <InspirationalRoom/>
     </main>
   );
 };
