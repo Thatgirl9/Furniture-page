@@ -7,11 +7,12 @@ import ProductImage4 from "@/assets/products/Images (2).png";
 import ProductImage5 from "@/assets/products/Image 5.png";
 import ProductImage6 from "@/assets/products/image 6.png";
 import ProductImage7 from "@/assets/products/Images (3).png";
-
 import ProductImage8 from "@/assets/products/image 8.png";
-
 import Image from "next/image";
 import { ProductItem } from "@/types/constants";
+import { IoMdShare } from "react-icons/io";
+import { FaRegHeart } from "react-icons/fa6";
+import { MdOutlineCompareArrows } from "react-icons/md";
 
 const Products = () => {
   const [hover, setHover] = React.useState<boolean>(false);
@@ -93,9 +94,6 @@ const Products = () => {
     },
   ];
 
-  // const itemHover = () => {
-  //   onmouseenter(itemHover, true);
-  // }
   return (
     <section className="grid grid-cols-4 gap-5 mt-14">
       {productItems.map((items, index) => {
@@ -110,9 +108,26 @@ const Products = () => {
             onMouseLeave={() => setHover(false)}
           >
             {hover && active === items.id && (
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-10">
-                <div className="flex justify-center items-center w-full h-full">
-                  <p className="text-white text-3xl">View Image</p>
+              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 z-10">
+                <div className="flex justify-center flex-col gap-4 items-center w-full h-full opacity-100">
+                  <button className="bg-background-0 hover:bg-primaryBrown-1 hover:text-primaryText-1 text-primaryBrown-0 px-12 h-12 text-base font-semibold">
+                    Add to cart
+                  </button>
+                  <div className="flex gap-5">
+                    <button className="flex items-center gap-1 text-background-0 font-semibold text-base hover:text-primaryBrown-1">
+                      <IoMdShare />
+                      <span>Share</span>
+                    </button>
+                    <button className="flex items-center gap-1 text-background-0 font-semibold text-base hover:text-primaryBrown-1">
+                      <MdOutlineCompareArrows />
+                    <span>Compare</span>
+                    </button>
+                    <button className="flex items-center gap-1 text-background-0 font-semibold text-base hover:text-primaryBrown-1">
+                      <FaRegHeart />
+                    <span>Like</span>
+                    </button>
+                  </div>
+                 
                 </div>
               </div>
             )}

@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { GoDash, GoArrowRight } from "react-icons/go";
-// import './styles.css';
 import InspirationalImage1 from "@/assets/homePage/Rectangle 24.png";
 import InspirationalImage2 from "@/assets/homePage/Rectangle 25.png";
 import InspirationalImage3 from "@/assets/homePage/Rectangle 26.png";
@@ -64,7 +63,7 @@ const InspirationalRoom = () => {
             <SwiperSlide key={index} className="">
               {activeImage === images.id && (
                 <div className="absolute bottom-6 left-4 flex justify-end items-end">
-                  <div className=" w-[217px] h-[130px] bg-background-0 opacity-65 backdrop-filter backdrop-blur-sm z-10">
+                  <div className=" w-[217px] h-[130px] bg-background-0 bg-opacity-70 z-10">
                     <div className="flex justify-center gap-1 items-center flex-col w-full h-full">
                       <p className="text-primaryText-7 text-base font-medium flex flex-row items-center justify-center">
                         <span>01</span>
