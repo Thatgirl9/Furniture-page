@@ -11,6 +11,7 @@ import { GoDash, GoArrowRight } from "react-icons/go";
 import InspirationalImage1 from "@/assets/homePage/Rectangle 24.png";
 import InspirationalImage2 from "@/assets/homePage/Rectangle 25.png";
 import InspirationalImage3 from "@/assets/homePage/Rectangle 26.png";
+import InspirationalImage4 from "@/assets/homePage/Rectangle 45.png";
 
 const InspirationalRoom = () => {
   const [activeImage, setActiveImage] = useState<number>(0);
@@ -26,6 +27,10 @@ const InspirationalRoom = () => {
     {
       id: 2,
       image: InspirationalImage3,
+    },
+    {
+      id: 3,
+      image: InspirationalImage4,
     },
   ];
   return (
@@ -43,17 +48,14 @@ const InspirationalRoom = () => {
         </button>
       </div>
       <Swiper
-        className="flex flex-row mySwiper border border-red-500"
+        className="flex flex-row mySwiper relative"
         spaceBetween={23}
         slidesPerView={2.2}
         navigation={true}
         pagination={true}
         loop={true}
         onSlideChange={(swiper) => {
-          console.log("slide change");
           setActiveImage(swiper.realIndex);
-          console.log(swiper.realIndex, ":Just the Index");
-          console.log(activeImage, ":Active Image index");
         }}
         modules={[Navigation, Pagination]}
       >
