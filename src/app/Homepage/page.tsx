@@ -7,6 +7,7 @@ import Range3 from "@/assets/homePage/Mask Group (1).png";
 import Image from "next/image";
 import Products from "@/components/Products";
 import InspirationalRoom from "@/components/InspirationalRoom";
+import FurniroFurniture from "@/components/FurniroFurniture";
 
 const Home = () => {
   const rangeImages = [
@@ -79,6 +80,7 @@ const Home = () => {
       </section>
 
       <InspirationalRoom/>
+      <FurniroFurniture/>
     </main>
   );
 };
