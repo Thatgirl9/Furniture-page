@@ -54,8 +54,7 @@ const Home = () => {
           </p>
         </div>
         <div className="grid grid-cols-3 gap-5 mt-14">
-          {rangeImages.map((image, index) => {
-            return (
+          {rangeImages.map((image, index) => (
               <div key={index}>
                 <Image
                   src={image.image}
@@ -67,8 +66,7 @@ const Home = () => {
                   {image.title}
                 </h3>
               </div>
-            );
-          })}
+          ))}
         </div>
       </section>
 

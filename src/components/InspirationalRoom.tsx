@@ -58,8 +58,7 @@ const InspirationalRoom = () => {
         }}
         modules={[Navigation, Pagination]}
       >
-        {inspirationalImages.map((images, index) => {
-          return (
+        {inspirationalImages.map((images, index) => (
             <SwiperSlide key={index} className="">
               {activeImage === images.id && (
                 <div className="absolute bottom-6 left-4 flex justify-end items-end">
@@ -95,8 +94,7 @@ const InspirationalRoom = () => {
                  placeholder="blur"
               />
             </SwiperSlide>
-          );
-        })}
+        ))}
       </Swiper>
     </section>
   );

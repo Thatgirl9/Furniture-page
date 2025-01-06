@@ -96,8 +96,7 @@ const Products = () => {
 
   return (
     <section className="grid grid-cols-4 gap-5 mt-14">
-      {productItems.map((items, index) => {
-        return (
+      {productItems.map((items, index) => (
           <div
             className=" bg-background-1 relative hover:cursor-pointer"
             key={index}
@@ -167,8 +166,7 @@ const Products = () => {
               </p>
             </div>
           </div>
-        );
-      })}
+      ))}
     </section>
   );
 };

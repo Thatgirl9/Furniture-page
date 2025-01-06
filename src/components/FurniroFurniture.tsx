@@ -24,7 +24,7 @@ const FurniroFurniture = () => {
     FurnitureImage9,
   ];
   return (
-    <section className="mt-6 mb-20 w-full overflow-clip">
+    <section className="mt-6 mb-16 w-full overflow-clip">
       <h3 className="text-primaryText-7 font-semibold text-xl text-center">
         Share your setup with
       </h3>
@@ -51,7 +51,7 @@ const FurniroFurniture = () => {
             <Image
               src={images[3]}
               alt="Image 4"
-              className="w-[322px] h-[242px]"
+              className="w-[322px] h-[200px]"
               loading="lazy" placeholder="blur"
             />
           </div>
@@ -84,7 +84,7 @@ const FurniroFurniture = () => {
             <Image
               src={images[7]}
               alt="Image 6"
-              className="w-[240px] h-[196px]"
+              className="w-[240px] h-[185px]"
               loading="lazy" placeholder="blur"
             />
           </div>
