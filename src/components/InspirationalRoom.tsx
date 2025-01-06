@@ -91,6 +91,8 @@ const InspirationalRoom = () => {
                     ? "h-[582px] w-[404px]"
                     : "h-[485px] w-[372px]"
                 } max-w-full`}
+                 loading="lazy"
+                 placeholder="blur"
               />
             </SwiperSlide>
           );

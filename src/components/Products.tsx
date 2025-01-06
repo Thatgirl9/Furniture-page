@@ -145,6 +145,7 @@ const Products = () => {
               src={items.image}
               alt="Image of a product"
               className="max-w-full w-[285px] h-[301px]"
+              loading="lazy" placeholder="blur"
             />
             <div className="px-4 pt-3 pb-6 gap-[6px] flex flex-col">
               <h2 className="text-primaryText-4 text-2xl font-semibold">

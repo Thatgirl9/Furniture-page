@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import FurnitureImage1 from "@/assets/homePage/Rectangle 36.png";
 import FurnitureImage2 from "@/assets/homePage/Rectangle 37.png";
@@ -23,46 +24,70 @@ const FurniroFurniture = () => {
     FurnitureImage9,
   ];
   return (
-    <section className="mt-6 mb-20">
+    <section className="mt-6 mb-20 w-full overflow-clip">
       <h3 className="text-primaryText-7 font-semibold text-xl text-center">
         Share your setup with
       </h3>
       <h1 className="text-primaryText-4 font-bold text-4xl text-center">
         #FurniroFurniture
       </h1>
-      <div className="grid grid-cols-12 gap-4 border border-red-500">
-        {/* Left Column */}
+      <div className="flex w-full gap-4 mt-4">
 
-        <div className="col-span-4 grid gap-4 borer border-blue-500">
-          <Image
-            src={images[0]}
-            alt="Image 1"
-            className="max-w-full h-auto"
-          />
-          <Image src={images[2]} alt="Image 3" className="w-full h-auto" />
-          <Image
-            src={images[1]}
-            alt="Image 2"
-            className="max-w-full h-[323px]"
-          />
-          <Image src={images[3]} alt="Image 4" className="w-full h-auto" />
+        <div>
+          <div className="flex items-end gap-4 mb-4">
+            <Image
+              src={images[0]}
+              alt="Image 1"
+              className="w-[100px] h-[380px]" loading="lazy" placeholder="blur"
+            />
+            <Image
+              src={images[2]}
+              alt="Image 3"
+              className="w-[390px] h-[300px]" loading="lazy" placeholder="blur"
+            />
+          </div>
+          <div className="flex gap-4">
+            <Image src={images[1]} alt="Image 2" className="w-[150px] h-auto" loading="lazy" placeholder="blur" />
+            <Image
+              src={images[3]}
+              alt="Image 4"
+              className="w-[322px] h-[242px]"
+              loading="lazy" placeholder="blur"
+            />
+          </div>
         </div>
-        {/* Center Column */}
-        <div className="col-span-4 grid gap-4 border border-green-500">
-          <Image src={images[4]} alt="Image 5" className="w-full h-auto" />
+        <div className="flex items-center gap-4">
+          <Image src={images[4]} alt="Image 5" className="w-full h-[392px]" loading="lazy" placeholder="blur" />
         </div>
-        {/* Right Column */}
-        <div className="col-span-4 flex flex-col gap-4 border border-yellow-500">
-          <Image src={images[6]} alt="Image 6" className="w-full h-auto" />
-          <Image src={images[8]} alt="Image 7" className="w-full h-auto" />
-          <Image src={images[5]} alt="Image 8" className="w-full h-auto" />
-          <Image src={images[7]} alt="Image 6" className="w-full h-auto" />
-        </div>
-
-        <div className="col-span-4 flex flex-col gap-4 border border-purple-500">
-          
-          {/* <Image src={images[9]} alt="Image 7" className="w-full h-auto" /> */}
-          {/* <Image src={images[7]} alt="Image 8" className="w-full h-auto" /> */}
+        <div>
+          <div className="flex gap-4 items-end">
+            <Image
+              src={images[6]}
+              alt="Image 6"
+              className="w-[230px] h-[300px]"
+              loading="lazy" placeholder="blur"
+            />
+            <Image
+              src={images[8]}
+              alt="Image 7"
+              className="w-[230px] h-[380px]"
+              loading="lazy" placeholder="blur"
+            />
+          </div>
+          <div className="flex gap-4 mt-4">
+            <Image
+              src={images[5]}
+              alt="Image 8"
+              className="w-[150px] h-[242px]"
+              loading="lazy" placeholder="blur"
+            />
+            <Image
+              src={images[7]}
+              alt="Image 6"
+              className="w-[240px] h-[196px]"
+              loading="lazy" placeholder="blur"
+            />
+          </div>
         </div>
       </div>
     </section>

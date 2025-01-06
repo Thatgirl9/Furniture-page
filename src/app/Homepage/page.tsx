@@ -61,6 +61,7 @@ const Home = () => {
                   src={image.image}
                   alt={image.title}
                   className="max-w-full w-[381px] h-[480px] "
+                  loading="lazy" placeholder="blur"
                 />
                 <h3 className="text-center text-xl text-primaryText-2 font-semibold mt-5">
                   {image.title}
