@@ -38,7 +38,7 @@ const Footer = () => {
   ];
   return (
     <footer className="mb-10 border-t-[1.5px] border-primaryText-10 flex flex-col items-center justify-center">
-      <div className="border-b border-primaryText-10  flex justify-between w-[85%] mx-auto py-10">
+      <div className="border-b border-primaryText-10  lg:flex grid md:grid-cols-2 grid-cols-1 gap-7 lg:gap-0 lg:justify-between w-[85%] mx-auto py-10">
         <div className="flex flex-col gap-10">
           <h1 className="font-bold text-2xl">Furniro.</h1>
           <p className="text-primaryText-9 text-base">

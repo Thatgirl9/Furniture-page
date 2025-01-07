@@ -6,7 +6,7 @@ import { useState } from "react";
 import Logo from "@/assets/homePage/Logo.png";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 import UserExclam from "@/assets/homePage/Vector.png";
-import { LuSearch } from "react-icons/lu";
+// import { LuSearch } from "react-icons/lu";
 import { PiHeart } from "react-icons/pi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
@@ -74,9 +74,9 @@ const NavBar = () => {
             <button className="">
               <Image src={UserExclam} alt="User Icon" width={23} />
             </button>
-            <button className="">
+            {/* <button className="">
               <LuSearch className="text-[28px]" />
-            </button>
+            </button> */}
             <button className="">
               <PiHeart className="text-[28px]" />
             </button>

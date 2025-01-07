@@ -24,14 +24,14 @@ const FurniroFurniture = () => {
     FurnitureImage9,
   ];
   return (
-    <section className="mt-6 mb-16 w-full overflow-clip">
+    <section className="mt-6 mb-16 w-full overflow-clip flex flex-col items-center justify-center">
       <h3 className="text-primaryText-7 font-semibold text-xl text-center">
         Share your setup with
       </h3>
       <h1 className="text-primaryText-4 font-bold text-4xl text-center">
         #FurniroFurniture
       </h1>
-      <div className="flex w-full gap-4 mt-4">
+      <div className="flex md:flex-row md:flex-nowrap items-center justify-center flex-wrap w-full gap-4 mt-4">
         <div>
           <div className="flex items-end gap-4 mb-4">
             <Image
@@ -66,11 +66,11 @@ const FurniroFurniture = () => {
             />
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center gap-4">
           <Image
             src={images[4]}
             alt="Image 5"
-            className="w-full h-[392px]"
+            className="w-[295px] h-[392px]"
             loading="lazy"
             placeholder="blur"
           />

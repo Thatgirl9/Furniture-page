@@ -33,12 +33,12 @@ const InspirationalRoom = () => {
     },
   ];
   return (
-    <section className="bg-primaryBrown-2 w-full mb-10 flex flex-row py-11 pl-16 justify-between">
-      <div className="flex justify-center flex-col w-[36%] gap-4">
-        <h1 className="w-[20ch] font-bold text-4xl text-primaryText-4">
+    <section className="bg-primaryBrown-2 w-full mb-10 flex xl:flex-row flex-col gap-8 xl:gap-0 py-11 xl:pl-16 xl:justify-between items-center justify-center">
+      <div className="xl:block flex items-center justify-center flex-col xl:w-[36%] w-fit gap-4">
+        <h1 className="md:w-[20ch] xl:text-left text-center font-bold text-4xl text-primaryText-4">
           50+ Beautiful rooms inspiration
         </h1>
-        <p className="text-base font-medium w-[35ch] text-primaryText-7">
+        <p className="text-base font-medium md:w-[35ch] text-primaryText-7 xl:text-left text-center">
           Our designer already made a lot of beautiful prototype of rooms that
           inspire you
         </p>
@@ -47,7 +47,7 @@ const InspirationalRoom = () => {
         </button>
       </div>
       <Swiper
-        className="flex flex-row mySwiper relative"
+        className="flex flex-row mySwiper relative border border-red-500 w-[90%] overflow-clip"
         spaceBetween={23}
         slidesPerView={2.2}
         navigation={true}

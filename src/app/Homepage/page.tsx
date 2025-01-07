@@ -25,16 +25,16 @@ const Home = () => {
     },
   ];
   return (
-    <main className="flex flex-col items-center">
-      <section className="homeSection flex justify-end items-center px-10">
-        <div className="bg-primaryBrown-1 rounded-md pl-7 pr-5 pt-10 pb-7 mt-12">
+    <main className="flex flex-col items-center w-full">
+      <section className="homeSection flex lg:justify-end justify-center items-center md:px-10 my-14 md:mt-0">
+        <div className="bg-primaryBrown-1 rounded-md pl-7 pr-5 pt-10 pb-7 mt-12 w-[90%] md:w-auto md:block flex justify-center items-center flex-col text-center md:text-left">
           <h4 className="text-base font-semibold text-primaryText-2 mb-1">
             New Arrival
           </h4>
-          <h1 className="w-[13ch] font-bold text-[3.25rem] leading-[65px] text-primaryBrown-0">
+          <h1 className="md:w-[13ch] w-fit font-bold md:text-[3.25rem] text-[2rem] leading-normal md:leading-[65px] text-primaryBrown-0">
             Discover Our New Collection
           </h1>
-          <p className="w-[48ch] text-lg font-medium text-primaryText-2 mt-2">
+          <p className="md:w-[48ch] w-fit text-lg font-medium text-primaryText-2 mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
@@ -44,7 +44,7 @@ const Home = () => {
           </button>
         </div>
       </section>
-      <section className="mt-5">
+      <section className="mt-5 flex flex-col items-center justify-center md:w-fit w-[90%]">
         <div className="text-center">
           <h2 className="text-primaryText-2 text-3xl font-bold">
             Browse The Range
@@ -53,13 +53,13 @@ const Home = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-5 mt-14">
+        <div className="xl:grid xl:grid-cols-3 lg:flex-row flex-col md:flex-wrap flex items-center justify-center  gap-5 mt-14">
           {rangeImages.map((image, index) => (
               <div key={index}>
                 <Image
                   src={image.image}
                   alt={image.title}
-                  className="max-w-full w-[381px] h-[480px] "
+                  className="max-w-full w-[381px] md:h-[480px] h-[440px]"
                   loading="lazy" placeholder="blur"
                 />
                 <h3 className="text-center text-xl text-primaryText-2 font-semibold mt-5">

@@ -95,7 +95,7 @@ const Products = () => {
   ];
 
   return (
-    <section className="grid grid-cols-4 gap-5 mt-14">
+    <section className="grid xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 mt-14">
       {productItems.map((items, index) => (
           <div
             className=" bg-background-1 relative hover:cursor-pointer"
