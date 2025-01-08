@@ -11,6 +11,8 @@ import InspirationalImage1 from "@/assets/homePage/Rectangle 24.png";
 import InspirationalImage2 from "@/assets/homePage/Rectangle 25.png";
 import InspirationalImage3 from "@/assets/homePage/Rectangle 26.png";
 import InspirationalImage4 from "@/assets/homePage/Rectangle 45.png";
+import { useMediaQuery } from 'react-responsive'
+
 
 const InspirationalRoom = () => {
   const [activeImage, setActiveImage] = useState<number>(0);
@@ -32,9 +34,12 @@ const InspirationalRoom = () => {
       image: InspirationalImage4,
     },
   ];
+
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   return (
     <section className="bg-primaryBrown-2 w-full mb-10 flex xl:flex-row flex-col gap-8 xl:gap-0 py-11 xl:pl-16 xl:justify-between items-center justify-center">
-      <div className="xl:block flex items-center justify-center flex-col xl:w-[36%] w-fit gap-4">
+      <div className=" flex xl:items-start xl:justify-start items-center justify-center flex-col xl:w-[36%] w-fit gap-4">
         <h1 className="md:w-[20ch] xl:text-left text-center font-bold text-4xl text-primaryText-4">
           50+ Beautiful rooms inspiration
         </h1>
@@ -47,11 +52,13 @@ const InspirationalRoom = () => {
         </button>
       </div>
       <Swiper
-        className="flex flex-row mySwiper relative border border-red-500 w-[90%] overflow-clip"
+        className="flex flex-row mySwiper relative border border-red-500 w-[90%] sm:w-[80%]"
         spaceBetween={23}
-        slidesPerView={2.2}
+        slidesPerView={isMobile ? 1 : 2.2}
         navigation={true}
-        pagination={true}
+        pagination={
+          true
+        }
         loop={true}
         onSlideChange={(swiper) => {
           setActiveImage(swiper.realIndex);
@@ -61,7 +68,7 @@ const InspirationalRoom = () => {
         {inspirationalImages.map((images, index) => (
             <SwiperSlide key={index} className="">
               {activeImage === images.id && (
-                <div className="absolute bottom-6 left-4 flex justify-end items-end">
+                <div className="absolute bottom-6 left-3 md:left-0 lg:left-4 flex justify-end items-end">
                   <div className=" w-[217px] h-[130px] bg-background-0 bg-opacity-70 z-10">
                     <div className="flex justify-center gap-1 items-center flex-col w-full h-full">
                       <p className="text-primaryText-7 text-base font-medium flex flex-row items-center justify-center">

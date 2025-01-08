@@ -23,17 +23,19 @@ const FurniroFurniture = () => {
     FurnitureImage8,
     FurnitureImage9,
   ];
+  
+
   return (
     <section className="mt-6 mb-16 w-full overflow-clip flex flex-col items-center justify-center">
-      <h3 className="text-primaryText-7 font-semibold text-xl text-center">
+      <h3 className="text-primaryText-7 font-semibold text-lg sm:text-xl text-center">
         Share your setup with
       </h3>
-      <h1 className="text-primaryText-4 font-bold text-4xl text-center">
+      <h1 className="text-primaryText-4 font-bold text-2xl sm:text-4xl text-center">
         #FurniroFurniture
       </h1>
-      <div className="flex md:flex-row md:flex-nowrap items-center justify-center flex-wrap w-full gap-4 mt-4">
+      <div className="flex md:flex-row md:flex-nowrap items-center justify-center flex-wrap w-full gap-4 md:gap-40 lg:gap-4 mt-4">
         <div>
-          <div className="flex items-end gap-4 mb-4">
+          <div className="flex items-end gap-4 mb-4 lg:gap-3 xl:gap-4">
             <Image
               src={images[0]}
               alt="Image 1"
@@ -44,55 +46,55 @@ const FurniroFurniture = () => {
             <Image
               src={images[2]}
               alt="Image 3"
-              className="w-[390px] h-[300px]"
+              className="w-[390px] lg:w-[330px] xl:w-[390px] h-[300px] lg:h[290px] xl:h-[300px]"
               loading="lazy"
               placeholder="blur"
             />
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 lg:gap-3 xl:gap-4">
             <Image
               src={images[1]}
               alt="Image 2"
-              className="w-[150px] h-auto"
+              className="w-[150px] lg:w-[130px] xl:w-[150px] h-auto"
               loading="lazy"
               placeholder="blur"
             />
             <Image
               src={images[3]}
               alt="Image 4"
-              className="w-[322px] h-[200px]"
+              className="w-[342px] lg:w-[278px] xl:w-[342px] h-[200px]"
               loading="lazy"
               placeholder="blur"
             />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex md:hidden lg:flex items-center justify-center gap-4 lg:gap-3 xl:gap-4">
           <Image
             src={images[4]}
             alt="Image 5"
-            className="w-[295px] h-[392px]"
+            className="w-[295px] lg:w-[190px] xl:w-[295px] h-[392px] lg:h-[330px] xl:h-[392px] "
             loading="lazy"
             placeholder="blur"
           />
         </div>
         <div>
-          <div className="flex gap-4 items-end">
+          <div className="flex gap-4 items-end lg:gap-3 xl:gap-4">
             <Image
               src={images[6]}
               alt="Image 6"
-              className="w-[230px] h-[300px]"
+              className="w-[230px] lg:w-[200px] xl:w-[230px] h-[300px]"
               loading="lazy"
               placeholder="blur"
             />
             <Image
               src={images[8]}
               alt="Image 7"
-              className="w-[230px] h-[380px]"
+              className="w-[230px] lg:w-[200px] h-[380px]"
               loading="lazy"
               placeholder="blur"
             />
           </div>
-          <div className="flex gap-4 mt-4">
+          <div className="flex gap-4 mt-4 lg:gap-3 xl:gap-4">
             <Image
               src={images[5]}
               alt="Image 8"

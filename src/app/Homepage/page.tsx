@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <main className="flex flex-col items-center w-full">
       <section className="homeSection flex lg:justify-end justify-center items-center md:px-10 my-14 md:mt-0">
-        <div className="bg-primaryBrown-1 rounded-md pl-7 pr-5 pt-10 pb-7 mt-12 w-[90%] md:w-auto md:block flex justify-center items-center flex-col text-center md:text-left">
+        <div className="bg-primaryBrown-1 rounded-md pl-7 pr-5 py-4 md:pt-10 md:pb-7 mt-12 w-[90%] md:w-auto md:block flex justify-center items-center flex-col text-center md:text-left">
           <h4 className="text-base font-semibold text-primaryText-2 mb-1">
             New Arrival
           </h4>
@@ -49,7 +49,7 @@ const Home = () => {
           <h2 className="text-primaryText-2 text-3xl font-bold">
             Browse The Range
           </h2>
-          <p className="text-primaryText-3 text-xl ">
+          <p className="text-primaryText-3 text-lg sm:text-xl  ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
