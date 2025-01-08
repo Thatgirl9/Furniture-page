@@ -25,9 +25,9 @@ const Home = () => {
     },
   ];
   return (
-    <main className="flex flex-col items-center w-full">
-      <section className="homeSection flex lg:justify-end justify-center items-center md:px-10 my-14 md:mt-0">
-        <div className="bg-primaryBrown-1 rounded-md pl-7 pr-5 py-4 md:pt-10 md:pb-7 mt-12 w-[90%] md:w-auto md:block flex justify-center items-center flex-col text-center md:text-left">
+    <main className="flex flex-col items-center w-full ">
+      <section className="homeSection flex lg:justify-end justify-center items-center md:px-10 my-14 md:mt-0 min-h-screen">
+        <div className="bg-primaryBrown-1 rounded-md pl-7 pr-5 pt-10 pb-7 mt-12 w-[90%] md:w-auto md:block flex justify-center items-center flex-col text-center md:text-left">
           <h4 className="text-base font-semibold text-primaryText-2 mb-1">
             New Arrival
           </h4>
@@ -53,7 +53,7 @@ const Home = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div className="xl:grid xl:grid-cols-3 lg:flex-row flex-col md:flex-wrap flex items-center justify-center  gap-5 mt-14">
+        <div className="xl:grid xl:grid-cols-3 md:flex-row flex-col md:flex-wrap flex items-center justify-center  gap-5 mt-14">
           {rangeImages.map((image, index) => (
               <div key={index}>
                 <Image

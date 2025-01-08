@@ -35,11 +35,11 @@ const InspirationalRoom = () => {
     },
   ];
 
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   return (
     <section className="bg-primaryBrown-2 w-full mb-10 flex xl:flex-row flex-col gap-8 xl:gap-0 py-11 xl:pl-16 xl:justify-between items-center justify-center">
-      <div className=" flex xl:items-start xl:justify-start items-center justify-center flex-col xl:w-[36%] w-fit gap-4">
+      <div className=" flex xl:items-start xl:justify-start items-center justify-center flex-col xl:w-[36%] w-[90%] sm:w-fit gap-4">
         <h1 className="md:w-[20ch] xl:text-left text-center font-bold text-4xl text-primaryText-4">
           50+ Beautiful rooms inspiration
         </h1>
@@ -52,7 +52,7 @@ const InspirationalRoom = () => {
         </button>
       </div>
       <Swiper
-        className="flex flex-row mySwiper relative border border-red-500 w-[90%] sm:w-[80%]"
+        className="flex flex-row mySwiper relative w-[90%] sm:w-[80%]"
         spaceBetween={23}
         slidesPerView={isMobile ? 1 : 2.2}
         navigation={true}
