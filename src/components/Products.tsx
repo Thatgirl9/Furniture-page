@@ -17,6 +17,17 @@ import { MdOutlineCompareArrows } from "react-icons/md";
 const Products = () => {
   const [hover, setHover] = React.useState<boolean>(false);
   const [active, setActive] = React.useState<number>(0);
+  // const [products, setProducts] = React.useState<ProductItem[]>([]);
+
+  React.useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch('/api/productLists');
+      const data = await response.json();
+      // setProducts(data); 
+      console.log(data);
+    };
+    fetchProducts();
+  }, []);
   const productItems: ProductItem[] = [
     {
       id: 1,
