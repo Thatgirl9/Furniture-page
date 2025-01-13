@@ -13,6 +13,7 @@ import { ProductItem } from "@/types/constants";
 import { IoMdShare } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineCompareArrows } from "react-icons/md";
+import axios from "axios";
 
 const Products = () => {
   const [hover, setHover] = React.useState<boolean>(false);
@@ -21,8 +22,8 @@ const Products = () => {
 
   React.useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('/api/productLists');
-      const data = await response.json();
+      const response = await axios.get('/api/productLists');
+      const data = await response.data;
       // setProducts(data); 
       console.log(data);
     };
